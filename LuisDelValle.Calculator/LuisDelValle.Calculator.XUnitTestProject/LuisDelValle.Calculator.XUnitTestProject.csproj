@@ -13,4 +13,9 @@
     <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LuisDelValle.Calculator.CalculatorService\LuisDelValle.Calculator.CalculatorService.csproj" />
+    <ProjectReference Include="..\LuisDelValle.Calculator.Models\LuisDelValle.Calculator.Models.csproj" />
+  </ItemGroup>
+
 </Project>
