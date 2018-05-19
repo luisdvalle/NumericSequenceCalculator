@@ -4,4 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LuisDelValle.Calculator.Abstractions\LuisDelValle.Calculator.Abstractions.csproj" />
+    <ProjectReference Include="..\LuisDelValle.Calculator.Models\LuisDelValle.Calculator.Models.csproj" />
+  </ItemGroup>
+
 </Project>
