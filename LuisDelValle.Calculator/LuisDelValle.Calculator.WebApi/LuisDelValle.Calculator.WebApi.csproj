@@ -16,4 +16,10 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LuisDelValle.Calculator.Abstractions\LuisDelValle.Calculator.Abstractions.csproj" />
+    <ProjectReference Include="..\LuisDelValle.Calculator.CalculatorService\LuisDelValle.Calculator.CalculatorService.csproj" />
+    <ProjectReference Include="..\LuisDelValle.Calculator.Models\LuisDelValle.Calculator.Models.csproj" />
+  </ItemGroup>
+
 </Project>

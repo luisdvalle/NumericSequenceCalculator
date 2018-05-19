@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LuisDelValle.Calculator.CalculatorService;
+using LuisDelValle.Calculator.CalculatorService.Abstractions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -24,6 +26,9 @@ namespace LuisDelValle.Calculator.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            // Registering SequenceService in DI
+            services.AddScoped<INumberService, SequenceService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -34,6 +39,7 @@ namespace LuisDelValle.Calculator.WebApi
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStaticFiles();
             app.UseMvc();
         }
     }
