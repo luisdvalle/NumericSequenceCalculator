@@ -7,11 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuisDelValle.Calculator.Web
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuisDelValle.Calculator.WebApi", "LuisDelValle.Calculator.WebApi\LuisDelValle.Calculator.WebApi.csproj", "{D1F41BE9-AFA3-4EEB-AA26-224D707206C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuisDelValle.Calculator.AuthServer", "LuisDelValle.Calculator.AuthServer\LuisDelValle.Calculator.AuthServer.csproj", "{21C53FCD-D496-4DDE-A36B-76D4823C425A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuisDelValle.Calculator.AuthServer", "LuisDelValle.Calculator.AuthServer\LuisDelValle.Calculator.AuthServer.csproj", "{21C53FCD-D496-4DDE-A36B-76D4823C425A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{68BFEE6B-04FE-4564-8404-FB5EA5881AE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuisDelValle.Calculator.XUnitTestProject", "LuisDelValle.Calculator.XUnitTestProject\LuisDelValle.Calculator.XUnitTestProject.csproj", "{A44E87F3-6073-4CBE-B07D-D00973A6AD3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LuisDelValle.Calculator.XUnitTestProject", "LuisDelValle.Calculator.XUnitTestProject\LuisDelValle.Calculator.XUnitTestProject.csproj", "{A44E87F3-6073-4CBE-B07D-D00973A6AD3E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{42168E2D-706F-4A6D-AABD-0F02D4470EDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuisDelValle.Calculator.CalculatorService", "LuisDelValle.Calculator.CalculatorService\LuisDelValle.Calculator.CalculatorService.csproj", "{0FF3278D-0F25-4F6B-818F-DC549E0EA0B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,12 +39,17 @@ Global
 		{A44E87F3-6073-4CBE-B07D-D00973A6AD3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A44E87F3-6073-4CBE-B07D-D00973A6AD3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A44E87F3-6073-4CBE-B07D-D00973A6AD3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FF3278D-0F25-4F6B-818F-DC549E0EA0B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FF3278D-0F25-4F6B-818F-DC549E0EA0B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FF3278D-0F25-4F6B-818F-DC549E0EA0B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FF3278D-0F25-4F6B-818F-DC549E0EA0B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A44E87F3-6073-4CBE-B07D-D00973A6AD3E} = {68BFEE6B-04FE-4564-8404-FB5EA5881AE0}
+		{0FF3278D-0F25-4F6B-818F-DC549E0EA0B0} = {42168E2D-706F-4A6D-AABD-0F02D4470EDC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {55F80735-430E-471F-BA2A-D79F916D27FD}
