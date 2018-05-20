@@ -13,7 +13,7 @@ namespace LuisDelValle.Calculator.WebApp.Controllers
         public HomeController(IRestClient restClient)
         {
             _restClient = restClient;
-            _restClient.Host = "http://localhost:51454/";
+            _restClient.Host = "http://localhost:5001/";
             _restClient.Path = "api/sequences?number=";
         }
 
