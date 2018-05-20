@@ -16,8 +16,8 @@ Although the implementation to get the sequence of numbers is straightforward, I
 <ul>
 <li>For this three projects in this solution: AuthServer, WebApi and WebApp projects, select the following profiles to be used when running the projects (this will avoid that the web browser is run when running AuthServer and WebApi - this profile can be selected in the Toolbar underneath the menu in VS):
   <ul>
-    <li>AuthServer -> Profile: LuisDelValle.Calculator.AuthServer (Not IIS Express)</li>
-    <li>WebApi -> Profile: LuisDelValle.Calculator.WebApi (Not IIS Express</li>
+    <li>AuthServer -> Profile: LuisDelValle.Calculator.AuthServer (Not IIS Express) - <strong>Change port to http://localhost:5000/</strong></li>
+    <li>WebApi -> Profile: LuisDelValle.Calculator.WebApi (Not IIS Express) - <strong>change port to http://localhost:5001/</strong></li>
     <li>WebApp -> Profile: IIS Express</li>
   </ul>
 </li>
