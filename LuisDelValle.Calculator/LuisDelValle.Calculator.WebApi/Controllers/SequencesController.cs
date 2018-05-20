@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using LuisDelValle.Calculator.CalculatorService.Abstractions;
+﻿using LuisDelValle.Calculator.CalculatorService.Abstractions;
 using LuisDelValle.Calculator.CalculatorService.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LuisDelValle.Calculator.WebApi.Controllers
 {
     [Produces("application/json")]
     [Route("api/[controller]")]
+    [Authorize]
     public class SequencesController : Controller
     {
         private INumberService _sequencesService;

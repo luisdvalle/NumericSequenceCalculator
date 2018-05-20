@@ -25,7 +25,18 @@ namespace LuisDelValle.Calculator.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddMvcCore()
+                .AddAuthorization()
+                .AddJsonFormatters();
+
+            services.AddAuthentication("Bearer")
+                .AddIdentityServerAuthentication(options =>
+                {
+                    options.Authority = "http://localhost:5000";
+                    options.RequireHttpsMetadata = false;
+
+                    options.ApiName = "sequencesapi";
+                });
 
             // Registering SequenceService in DI
             services.AddScoped<INumberService, SequenceService>();
@@ -39,6 +50,7 @@ namespace LuisDelValle.Calculator.WebApi
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseAuthentication();
             app.UseStaticFiles();
             app.UseMvc();
         }

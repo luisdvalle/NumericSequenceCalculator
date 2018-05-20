@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using IdentityModel.Client;
 using LuisDelValle.Calculator.Abstractions;
 using LuisDelValle.Calculator.CalculatorService.Models;
 using Newtonsoft.Json;
@@ -16,8 +17,34 @@ namespace LuisDelValle.Calculator.WebApp.Services
 
         private static HttpClient Client = new HttpClient();
 
-        public async Task<Response> GetResponseAsync()
+        private async Task RequestTokenAsync()
         {
+            // discover endpoints from metadata
+            var disco = await DiscoveryClient.GetAsync("http://localhost:5000");
+            if (disco.IsError)
+            {
+                Console.WriteLine(disco.Error);
+                return;
+            }
+
+            // request token
+            var tokenClient = new TokenClient(disco.TokenEndpoint, "client", "secret");
+            var tokenResponse = await tokenClient.RequestClientCredentialsAsync("sequencesapi");
+
+            if (tokenResponse.IsError)
+            {
+                Console.WriteLine(tokenResponse.Error);
+                return;
+            }
+
+            Client.SetBearerToken(tokenResponse.AccessToken);
+            return;
+        }
+
+        public async Task<Abstractions.Response> GetResponseAsync()
+        {
+            await RequestTokenAsync();
+
             var stringResponse = await Client.GetStringAsync(Host + Path);
 
             if (stringResponse != null)
