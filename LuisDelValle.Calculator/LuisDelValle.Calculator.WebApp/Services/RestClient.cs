@@ -20,7 +20,7 @@ namespace LuisDelValle.Calculator.WebApp.Services
         private async Task RequestTokenAsync()
         {
             // discover endpoints from metadata
-            var disco = await DiscoveryClient.GetAsync("http://localhost:5000");
+            var disco = await DiscoveryClient.GetAsync("ttp://localhost:51456/");
             if (disco.IsError)
             {
                 Console.WriteLine(disco.Error);
