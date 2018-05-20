@@ -39,6 +39,8 @@ namespace LuisDelValle.Calculator.WebApp.Controllers
             {
                 _restClient.Path = _restClient.Path + vm.InputNumber;
                 SequencesResponse sequences = await _restClient.GetResponseAsync() as SequencesResponse;
+
+                vm.Sequences = sequences;
             }
 
             return View(vm);

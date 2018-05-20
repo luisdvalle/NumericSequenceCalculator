@@ -16,21 +16,37 @@
 
 @if (Model.Sequences != null)
 {
+    string listNumbers = String.Empty;
+
     <h3>Sequences:</h3>
 
     if (Model.Sequences.AllNumbersSequence != null)
     {
-        <p>Sequence with all numbers: @Model.Sequences.AllNumbersSequence</p>
+        foreach (var num in Model.Sequences.AllNumbersSequence)
+        {
+            listNumbers += num + " ";
+        }
+        <p>Sequence with all numbers: @listNumbers</p>
     }
 
     if (Model.Sequences.OddNumbersSequence != null)
     {
-        <p>Sequence with odd numbers: @Model.Sequences.OddNumbersSequence</p>
+        listNumbers = String.Empty;
+        foreach (var num in Model.Sequences.OddNumbersSequence)
+        {
+            listNumbers += num + " ";
+        }
+        <p>Sequence with odd numbers: @listNumbers</p>
     }
 
     if (Model.Sequences.EvenNumbersSequence != null)
     {
-        <p>Sequence with even numbers: @Model.Sequences.EvenNumbersSequence</p>
+        listNumbers = String.Empty;
+        foreach (var num in Model.Sequences.EvenNumbersSequence)
+        {
+            listNumbers += num + " ";
+        }
+        <p>Sequence with even numbers: @listNumbers</p>
     }
 
     if (Model.Sequences.AllNumbersSecondSequence == null)
@@ -39,6 +55,11 @@
     }
     else
     {
-        <p>Second sequence with all numbers: @Model.Sequences.AllNumbersSecondSequence</p>
+        listNumbers = String.Empty;
+        foreach (var num in Model.Sequences.AllNumbersSecondSequence)
+        {
+            listNumbers += num + " ";
+        }
+        <p>Second sequence with all numbers: @listNumbers</p>
     }
 }
