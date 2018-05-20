@@ -30,7 +30,7 @@ namespace LuisDelValle.Calculator.WebApp.Controllers
         {
             if (vm.InputNumber < 1)
             {
-                ModelState.AddModelError("", "Output number can't be less than 1");
+                ModelState.AddModelError("", "Input number can't be less than 1");
 
                 return View(vm);
             }
