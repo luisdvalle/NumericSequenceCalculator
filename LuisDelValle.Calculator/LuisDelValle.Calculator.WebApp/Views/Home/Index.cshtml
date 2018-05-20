@@ -1,2 +1,44 @@
-﻿<h2>Numeric Sequence Calculator</h2>
+﻿@model SequencesViewModel
 
+<h2>Numeric Sequence Calculator</h2>
+
+<form asp-action="Index" asp-controller="Home" method="post">
+    <div asp-validation-summary="ModelOnly"></div>
+
+    <div>
+        <label asp-for="InputNumber"></label>
+        <input asp-for="InputNumber" />
+        <span asp-validation-for="InputNumber"></span>
+    </div>
+
+    <input type="submit" value="send" />
+</form>
+
+@if (Model.Sequences != null)
+{
+    <h3>Sequences:</h3>
+
+    if (Model.Sequences.AllNumbersSequence != null)
+    {
+        <p>Sequence with all numbers: @Model.Sequences.AllNumbersSequence</p>
+    }
+
+    if (Model.Sequences.OddNumbersSequence != null)
+    {
+        <p>Sequence with odd numbers: @Model.Sequences.OddNumbersSequence</p>
+    }
+
+    if (Model.Sequences.EvenNumbersSequence != null)
+    {
+        <p>Sequence with even numbers: @Model.Sequences.EvenNumbersSequence</p>
+    }
+
+    if (Model.Sequences.AllNumbersSecondSequence == null)
+    {
+        <p>Special Character: @Model.Sequences.CharacterOutput</p>
+    }
+    else
+    {
+        <p>Second sequence with all numbers: @Model.Sequences.AllNumbersSecondSequence</p>
+    }
+}
