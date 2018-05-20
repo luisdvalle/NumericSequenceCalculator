@@ -32,7 +32,7 @@ namespace LuisDelValle.Calculator.WebApi
             services.AddAuthentication("Bearer")
                 .AddIdentityServerAuthentication(options =>
                 {
-                    options.Authority = "http://localhost:5000";
+                    options.Authority = "ttp://localhost:51456/";
                     options.RequireHttpsMetadata = false;
 
                     options.ApiName = "sequencesapi";
